@@ -61,7 +61,7 @@ export default function ResponseCard({ status, response }: Props) {
           transition={{ duration: 0.35, ease: "easeOut" }}
           className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6"
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-violet-500/5 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-br from-sky-500/5 via-transparent to-teal-500/5 pointer-events-none" />
 
           {/* Shimmer sweep */}
           <motion.div
@@ -80,7 +80,7 @@ export default function ResponseCard({ status, response }: Props) {
               {[0, 1, 2].map((i) => (
                 <motion.span
                   key={i}
-                  className="w-1.5 h-1.5 rounded-full bg-blue-400/70 block"
+                  className="w-1.5 h-1.5 rounded-full bg-sky-400/70 block"
                   animate={{ y: [0, -5, 0], opacity: [0.5, 1, 0.5] }}
                   transition={{
                     duration: 0.9,
@@ -165,11 +165,11 @@ export default function ResponseCard({ status, response }: Props) {
           <div className="fixed inset-0 overflow-hidden pointer-events-none">
             {[
               {
-                cn: "absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full bg-blue-600/10 blur-[120px]",
+                cn: "absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full bg-sky-500/8 blur-[120px]",
                 delay: 0,
               },
               {
-                cn: "absolute top-1/3 -right-40 w-[500px] h-[500px] rounded-full bg-violet-600/8 blur-[120px]",
+                cn: "absolute top-1/3 -right-40 w-[500px] h-[500px] rounded-full bg-teal-500/6 blur-[120px]",
                 delay: 0.2,
               },
               {
@@ -223,7 +223,7 @@ export default function ResponseCard({ status, response }: Props) {
                   className="rounded-2xl p-5 border border-white/[0.06] cursor-default"
                   style={{
                     background:
-                      "linear-gradient(135deg, rgba(59,130,246,0.09) 0%, rgba(139,92,246,0.04) 100%)",
+                      "linear-gradient(135deg, rgba(56,189,248,0.09) 0%, rgba(20,184,166,0.04) 100%)",
                     backdropFilter: "blur(12px)",
                   }}
                 >
