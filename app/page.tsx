@@ -1,5 +1,6 @@
 "use client";
 
+import QueryInput from "@/components/QueryInput";
 import { getMockResponse, AIResponse } from "@/lib/mockedData";
 import { useState } from "react";
 
@@ -73,12 +74,12 @@ export default function Home() {
           </div>
         )}
 
-        {/* ⏳ Loading */}
-        {status === "loading" && (
-          <div className="p-4 bg-neutral-800 rounded-lg">
-            <p className="animate-pulse">Analyzing financial data...</p>
-          </div>
-        )}
+        <QueryInput
+          value={query}
+          onChange={setQuery}
+          onSubmit={handleSubmit}
+          isLoading={status === "loading" || status === "partial"}
+        />
 
         {/* ⚡ Partial */}
         {status === "partial" && (
