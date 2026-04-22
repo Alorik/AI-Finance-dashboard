@@ -1,5 +1,6 @@
 "use client";
 
+import ActionButtons from "@/components/ActionButons";
 import QueryInput from "@/components/QueryInput";
 import ResponseCard from "@/components/ResponseCard";
 import { getMockResponse, AIResponse } from "@/lib/mockedData";
@@ -82,6 +83,7 @@ export default function Home() {
           isLoading={status === "loading" || status === "partial"}
         />
         <ResponseCard status={status} response={response} />
+        {response && <ActionButtons actions={response.actions} />}
 
         {/* ⚡ Partial */}
         {status === "partial" && (
