@@ -1,6 +1,7 @@
 "use client";
 
 import QueryInput from "@/components/QueryInput";
+import ResponseCard from "@/components/ResponseCard";
 import { getMockResponse, AIResponse } from "@/lib/mockedData";
 import { useState } from "react";
 
@@ -80,6 +81,7 @@ export default function Home() {
           onSubmit={handleSubmit}
           isLoading={status === "loading" || status === "partial"}
         />
+        <ResponseCard status={status} response={response} />
 
         {/* ⚡ Partial */}
         {status === "partial" && (
