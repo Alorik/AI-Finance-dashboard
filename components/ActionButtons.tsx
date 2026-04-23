@@ -16,24 +16,6 @@ export default function ActionButtons({ actions }: Props) {
     <div className="space-y-3">
       {/* Header */}
       <div className="flex items-center gap-2.5">
-        <div
-          className="w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
-          style={{
-            background:
-              "linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%)",
-            border: "0.5px solid rgba(255,255,255,0.1)",
-          }}
-        >
-          <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
-            <path
-              d="M1.5 5.5h8M6.5 2.5l3 3-3 3"
-              stroke="rgba(255,255,255,0.5)"
-              strokeWidth="1.4"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </div>
         <span
           className="text-[11px] uppercase tracking-[0.15em]"
           style={{

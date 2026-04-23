@@ -44,11 +44,6 @@ export default function ResponseCard({ status, response }: Props) {
           transition={{ duration: 0.4, ease: "easeOut" }}
           className="flex items-center gap-3 px-5 py-4 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md text-white/40 text-sm font-light tracking-wide"
         >
-          <motion.span
-            className="w-1.5 h-1.5 rounded-full bg-white/20 block"
-            animate={{ opacity: [0.3, 0.8, 0.3] }}
-            transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-          />
           Ask a question to get financial insights.
         </motion.div>
       )}

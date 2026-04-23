@@ -17,32 +17,6 @@ export default function InsightSection({ summary, metrics }: Props) {
     <div className="space-y-4">
       {/* HEADER */}
       <div className="flex items-center gap-2.5">
-        {/* Icon */}
-        <div
-          className="flex items-center justify-center w-7 h-7 rounded-lg shrink-0"
-          style={{
-            background:
-              "linear-gradient(135deg, rgba(59,130,246,0.25) 0%, rgba(139,92,246,0.15) 100%)",
-            border: "0.5px solid rgba(59,130,246,0.3)",
-          }}
-        >
-          <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
-            <path
-              d="M6.5 1v2M6.5 10v2M1 6.5h2M10 6.5h2"
-              stroke="rgba(147,197,253,0.9)"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-            />
-            <circle
-              cx="6.5"
-              cy="6.5"
-              r="2.5"
-              stroke="rgba(147,197,253,0.9)"
-              strokeWidth="1.3"
-            />
-          </svg>
-        </div>
-
         <p
           className="text-[11px] uppercase tracking-[0.15em] font-medium"
           style={{

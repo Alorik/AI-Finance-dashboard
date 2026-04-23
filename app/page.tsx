@@ -75,7 +75,6 @@ export default function Home() {
             border: "0.5px solid rgba(56,189,248,0.2)",
           }}
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-sky-400/80 block" />
           <span
             className="text-[10px] uppercase tracking-[0.18em]"
             style={{
