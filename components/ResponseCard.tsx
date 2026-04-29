@@ -56,7 +56,7 @@ export default function ResponseCard({ status, response }: Props) {
           transition={{ duration: 0.35, ease: "easeOut" }}
           className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6"
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-sky-500/5 via-transparent to-teal-500/5 pointer-events-none" />
+          <div className="absolute inset-0 bg-linear-to-br from-sky-500/5 via-transparent to-teal-500/5 pointer-events-none" />
 
           {/* Shimmer sweep */}
           <motion.div
@@ -101,7 +101,7 @@ export default function ResponseCard({ status, response }: Props) {
           transition={{ duration: 0.35, ease: "easeOut" }}
           className="relative overflow-hidden rounded-2xl border border-amber-400/20 bg-amber-500/5 backdrop-blur-xl p-5"
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-amber-400/5 to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-linear-to-br from-amber-400/5 to-transparent pointer-events-none" />
           <div className="flex items-center gap-2.5 relative z-10">
             <span className="relative flex h-2 w-2 shrink-0">
               <motion.span
@@ -122,7 +122,6 @@ export default function ResponseCard({ status, response }: Props) {
         </motion.div>
       )}
 
-      {/* ❌ Error */}
       {status === "error" && (
         <motion.div
           key="error"
@@ -132,7 +131,7 @@ export default function ResponseCard({ status, response }: Props) {
           transition={{ duration: 0.35, ease: "easeOut" }}
           className="relative overflow-hidden rounded-2xl border border-red-400/20 bg-red-500/5 backdrop-blur-xl p-5"
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-red-400/5 to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-linear-to-br from-red-400/5 to-transparent pointer-events-none" />
           <div className="flex items-center gap-2.5 relative z-10">
             <motion.span
               className="w-2 h-2 rounded-full bg-red-400/80 block shrink-0"
@@ -146,7 +145,7 @@ export default function ResponseCard({ status, response }: Props) {
         </motion.div>
       )}
 
-      {/* ✅ Success */}
+
       {status === "success" && response && (
         <motion.div
           key="success"
@@ -154,9 +153,9 @@ export default function ResponseCard({ status, response }: Props) {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="relative min-h-screen bg-gradient-to-br from-[#0a0a14] via-[#0d0f1f] to-[#070810]"
+          className="relative min-h-screen bg-linear-to-br from-[#0a0a14] via-[#0d0f1f] to-[#070810]"
         >
-          {/* Ambient orbs */}
+
           <div className="fixed inset-0 overflow-hidden pointer-events-none">
             {[
               {
@@ -182,7 +181,6 @@ export default function ResponseCard({ status, response }: Props) {
             ))}
           </div>
 
-          {/* Card */}
           <div className="relative z-10 mx-auto max-w-2xl p-6">
             <motion.div
               initial={{ opacity: 0, y: 36, scale: 0.97 }}
@@ -203,19 +201,19 @@ export default function ResponseCard({ status, response }: Props) {
             >
               {/* Top shimmer line */}
               <motion.div
-                className="h-px w-full bg-gradient-to-r from-transparent via-white/25 to-transparent"
+                className="h-px w-full bg-linear-to-r from-transparent via-white/25 to-transparent"
                 initial={{ scaleX: 0, opacity: 0 }}
                 animate={{ scaleX: 1, opacity: 1 }}
                 transition={{ duration: 0.9, delay: 0.3, ease: "easeOut" }}
               />
 
               <div className="p-7 space-y-5">
-                {/* 🧠 Insight */}
+
                 <motion.div
                   initial={sectionInitial}
                   animate={sectionAnimate(0)}
                   whileHover={{ scale: 1.005, transition: { duration: 0.2 } }}
-                  className="rounded-2xl p-5 border border-white/[0.06] cursor-default"
+                  className="rounded-2xl p-5 border border-white/6 cursor-default"
                   style={{
                     background:
                       "linear-gradient(135deg, rgba(56,189,248,0.09) 0%, rgba(20,184,166,0.04) 100%)",
@@ -228,12 +226,12 @@ export default function ResponseCard({ status, response }: Props) {
                   />
                 </motion.div>
 
-                {/* ⚠️ Confidence */}
+
                 <motion.div
                   initial={sectionInitial}
                   animate={sectionAnimate(1)}
                   whileHover={{ scale: 1.005, transition: { duration: 0.2 } }}
-                  className="rounded-2xl p-5 border border-white/[0.06] cursor-default"
+                  className="rounded-2xl p-5 border border-white/0.6 cursor-default"
                   style={{
                     background:
                       "linear-gradient(135deg, rgba(245,158,11,0.07) 0%, rgba(255,255,255,0.02) 100%)",
@@ -246,12 +244,12 @@ export default function ResponseCard({ status, response }: Props) {
                   />
                 </motion.div>
 
-                {/* 🔍 Explanation */}
+
                 <motion.div
                   initial={sectionInitial}
                   animate={sectionAnimate(2)}
                   whileHover={{ scale: 1.005, transition: { duration: 0.2 } }}
-                  className="rounded-2xl p-5 border border-white/[0.06] cursor-default"
+                  className="rounded-2xl p-5 border border-white/0.6 cursor-default"
                   style={{
                     background:
                       "linear-gradient(135deg, rgba(20,184,166,0.07) 0%, rgba(255,255,255,0.02) 100%)",
@@ -265,7 +263,7 @@ export default function ResponseCard({ status, response }: Props) {
                 <motion.div
                   initial={sectionInitial}
                   animate={sectionAnimate(3)}
-                  className="rounded-2xl p-5 border border-white/[0.06]"
+                  className="rounded-2xl p-5 border border-white/6"
                   style={{
                     background: "rgba(255,255,255,0.025)",
                     backdropFilter: "blur(12px)",
@@ -277,7 +275,7 @@ export default function ResponseCard({ status, response }: Props) {
 
               {/* Bottom shimmer */}
               <motion.div
-                className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent"
+                className="h-px w-full bg-linear-to-r from-transparent via-white/10 to-transparent"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.75 }}
